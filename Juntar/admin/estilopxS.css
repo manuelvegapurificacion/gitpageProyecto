@@ -153,39 +153,8 @@ header button{
     padding: 20px;
     margin-top: 20px;
 }
-/* TABLET GRANDE (768px - 1024px) */
-@media (768px <= width <= 1024px) {
-    .formulario{
-        width: 95%;
-        max-width: 700px;
-        padding: 35px;
-    }
 
-    .formulario label{
-        font-size: 1.1em;
-        margin-top: 18px;
-    }
-
-    .formulario input,
-    .formulario select{
-        height: 45px;
-        font-size: 1em;
-        padding: 0 10px;
-    }
-
-    .btn-crear-evento{
-        height: 40px;
-        padding: 0 20px;
-        font-size: 1em;
-    }
-
-    .btn-formulario button{
-        padding: 12px 30px;
-        font-size: 1.05em;
-    }
-}
-
-/* TABLET PEQUEÑA / MÓVIL HORIZONTAL (601px - 767px) */
+/* MÓVIL HORIZONTAL (601px - 767px) */
 @media (601px <= width <= 767px) {
     header{
         font-size: 0.95em;
