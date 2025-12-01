@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deckology - Pantalla de Registro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor-principal-login">
+        <a id="volver-atras" href="acceso.html"> ⬅ Volver al inicio</a>
+
+        <form class="formulario-base" action="/registro" method="post">
+            <h2>Crear Cuenta</h2>
+            <p>Únete a la comunidad de Deckology</p>
+
+            <p class="texto-ayuda texto-ya-tienes">
+                ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
+            </p>
+
+            <label>Usuario:</label>
+            <input type="text" name="usuario" placeholder="usuarioejemplo">
+
+            <label>Correo Electrónico:</label>
+            <input type="email"name="email" placeholder="usuario@ejemplo.com">
+    
+            <label>Contraseña:</label>
+            <input type="password" name="password">
+
+            <label>Confirmar Contraseña:</label>
+            <input type="password">
+            <div class="division-con-flex">
+                <a href="acceso.html" class="boton"><button>Cancelar</button></a>
+                <a href="zonas.html" class="boton"><button type="submit">Crear cuenta</button></a>
+            </div>
+        </form>
+    </div> 
+</body>
+</html>

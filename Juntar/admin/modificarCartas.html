@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Carta</title>
+    <link rel="stylesheet" href="estiloAdmin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="barra-superior-admin">
+        <ul>
+            <li><a class="enlace-volver-atras" href="admin_dashboard.html"> ⬅ </a></li>
+            <li class="titulo-dashboard"><a href="admin_dashboard.html">Dashboard</a></li>
+            <li class="perfil-admin">ADMIN</li>
+        </ul>
+    </nav>
+
+<main class="mainEstrecho">
+    
+    <form action="admin_dashboard.html" method="GET" class="formulario">
+        <h1>Modificar cartas</h1>
+        <label for="">Zona</label>
+        <select name="zona" id="zonaSelect">
+            <option value="">Seleccionar zona</option>
+            <option value="Bosque">Bosque</option>
+            <option value="Ciudad">Ciudad</option>
+            <option value="Desierto">Desierto</option>
+            <option value="Oceano">Oceano</option>
+        </select>
+        
+        <label for="">Evento a eliminar</label>
+        <select name="evento" id="eventoSelect">
+            <option value="">Seleccionar evento</option>
+            <option value="Contaminacion">Contaminacion</option>
+            <option value="Desgastes">Desgastes</option>
+            <option value="ASDASDASD">ASDASDASD</option>
+            <option value="asdasdasd">asdasdasd</option>
+        </select>     
+        <label for="">Nombre</label>
+        <input type="text" name="nombre">
+        
+        <label for="">Descripción</label>
+        <input type="text" name="descripcion">
+        
+        <label for="">Curacion</label>
+        <input type="number" name="dano">
+        
+        <label for="">Emoticono</label>
+        <select name="emoticono">
+            <option value="">Selecciona un emoticono</option>
+            <option value="🔥">🔥 Fuego</option>
+            <option value="💧">💧 Agua</option>
+            <option value="🌱">🌱 Naturaleza</option>
+            <option value="⚡">⚡ Energía</option>
+            <option value="🏭">🏭 Industrial</option>
+            <option value="☣️">☣️ Tóxico</option>
+        </select>
+
+        <div class="seccionBotones">
+            <input id="eliminar" type="submit" value="Eliminar"/>
+            <button type="button" id="cancelar">Cancelar</button>
+            <input type="submit" id="modificar" value="Crear Carta"/>
+        </div>
+    </form>
+</main>
+
+<script src="jsEvento.js">
+</script>
+</body>
+</html>

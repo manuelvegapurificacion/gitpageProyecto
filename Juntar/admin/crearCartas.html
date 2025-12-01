@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Carta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilopxS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+<header id="cabecera">
+    <ul>
+        <li><a href="">←</a></li>
+    </ul>
+    <p>Deckology</p>
+    <button>Admin</button>
+</header>
+
+<main>
+    <h1 class="titulo">CREAR CARTAS</h1>
+
+    <form action="" method="GET" class="formulario">
+        <label for="">Zona</label>
+        <select name="zona" id="zonaSelect">
+            <option value="">Seleccionar zona</option>
+            <option value="Bosque">Bosque</option>
+            <option value="Ciudad">Ciudad</option>
+            <option value="Desierto">Desierto</option>
+            <option value="Oceano">Oceano</option>
+        </select>
+        
+        <label for="">Evento</label>
+        <div class="evento-selector">
+            <select name="evento" id="eventoSelect">
+                <option value="">Seleccionar evento</option>
+                <option value="Contaminacion">Contaminacion</option>
+                <option value="Desgastes">Desgastes</option>
+                <option value="ASDASDASD">ASDASDASD</option>
+                <option value="asdasdasd">asdasdasd</option>
+            </select>
+            <!-- type button para que no lo confunda con submit -->
+            <button type="button" class="btn-crear-evento" id="btnCrearEvento">Crear evento</button>
+        </div>
+        
+        <!-- Formulario para crear un nuevo evento (oculto por defecto) -->
+        <div id="formularioEventoNuevo">
+            <h2></h2>
+            <label for="">Nombre</label>
+            <input type="text" name="nombreEvento" id="nombreEvento">
+            
+            <label for="">Descripción</label>
+            <input type="text" name="descripcionEvento" id="descripcionEvento">
+            
+            <label for="">Curacion</label>
+            <input type="number" name="danoEvento" id="danoEvento">
+            
+            <label for="">Emoticono</label>
+            <select name="emoticonoEvento" id="emoticonoEvento">
+                <option value="">Selecciona un emoticono</option>
+                <option value="💧">💧 Agua</option>
+                <option value="🌱">🌱 Naturaleza</option>
+                <option value="⚡">⚡ Energía</option>
+            </select>
+        </div>
+        
+        <label for="">Nombre</label>
+        <input type="text" name="nombre">
+        
+        <label for="">Descripción</label>
+        <input type="text" name="descripcion">
+        
+        <label for="">Daño</label>
+        <input type="text" name="dano">
+        
+        <label for="">Numero de rondas</label>
+        <input type="number" name="rondas">
+        
+        <label for="">Emoticono</label>
+        <select name="emoticono">
+            <option value="">Selecciona un emoticono</option>
+            <option value="🔥">🔥 Fuego</option>
+            <option value="💧">💧 Agua</option>
+            <option value="🌱">🌱 Naturaleza</option>
+            <option value="⚡">⚡ Energía</option>
+            <option value="🏭">🏭 Industrial</option>
+            <option value="☣️">☣️ Tóxico</option>
+        </select>
+
+        <div class="btn-formulario">
+            <button type="button" id="cancelar">Cancelar</button>
+            <button type="submit">Crear Carta</button>
+        </div>
+        
+    </form>
+</main>
+
+<script src="jsEvento.js">
+</script>
+</body>
+</html>

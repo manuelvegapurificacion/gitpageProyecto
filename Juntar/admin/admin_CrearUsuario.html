@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Deckology - Modificar Usuario</title>
+    <link rel="stylesheet" href="estiloAdmin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body> 
+
+    <nav class="barra-superior-admin">
+        <ul>
+            <li><a class="enlace-volver-atras" href="acceso.html"> ⬅ </a></li>
+            <li class="titulo-dashboard"><a href="admin_dashboard.html">Dashboard</a></li>
+            <li class="perfil-admin">ADMIN</li>
+        </ul>
+    </nav>
+    
+    <main class="mainEstrecho">
+            <form class="formulario" action="lUsuarios.html" method="GET">
+                <h1>Crear Usuario</h1>
+
+                <label>Nombre de usuario</label>
+                <input type="text" value="Kiko"/>
+
+                <label>Correo electrónico</label>
+                <input type="email"  value="kiko@gmail.com"/>
+
+                <label>Contraseña</label>
+                <input type="text"  value="kiko123"/>
+
+                <label>Rol:</label>
+                <select>
+                    <option value="usuario" selected>Jugador</option>
+                    <option value="admin">Administrador</option>
+                </select>
+
+                <div class="seccionBotones">
+                    <button id="cancelar"><a href="lUsuarios.html">Cancelar</a></button>
+                    <input id="modificar" type="submit" value="Crear"/>
+                </div>
+            </form>
+        </main>
+</body>
+</html>

@@ -1,0 +1,175 @@
+:root{
+    --verdeTierra:#4CAF50;
+    --verdeClaro:#81C784;
+    --azulOceano:#2196F3;
+    --azulClaro:#64B5F6;
+    --amarilloDesieto:#FFEB3B;
+    --naranjaDesierto:#FB8C00;
+    --grisCiudad:#424242;
+    --grisClaro:#9E9E9E;
+}
+
+body{
+    background-color: #1F2937;
+    margin: 0px auto;
+    width: 1500px;
+}
+
+/* HEADER */
+.enlace-volver-atras{
+    color: white;
+    font-size: 30px;
+}
+.barra-superior-admin {
+    width: 1500px;
+    height: auto;
+    background-color: #2e3546;
+    display: flex;
+    align-items: center;
+    padding: 19px 58px;
+    box-sizing: border-box;
+}
+
+.barra-superior-admin ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 1500px;
+    display: flex; 
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.barra-superior-admin li {
+    display: inline-block;
+}
+
+.perfil-admin {
+    background-color: #ff9900;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+/*--------------------------------Pantalla de Dashboard Admin-------------------------------*/
+
+.contenido-dashboard {
+    text-align: center;
+    padding-top: 115px;
+}
+
+/*quitar estilos de enlace*/
+.contenido-dashboard a {
+    text-decoration: none;
+    color: black;
+}
+
+.texto-principal {
+    font-size: 36px; 
+    color: #c95195;
+    margin-bottom: 115px;
+    font-weight: bold;
+}
+
+/* Recargar dashboard */
+.titulo-dashboard {
+    color: white;
+    font-size: 18px; 
+    font-weight: bold;
+    margin: 0px auto; 
+}
+
+/*quitar estilo de enlace*/
+.titulo-dashboard a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Contenedor de las 4 opciones */
+.contenedor-opciones-admin {
+    width: 1500px;
+    text-align: center;
+    margin-top: 38px;
+    margin-bottom: 77px;
+}
+
+/* Tarjeta individual de gestión */
+.tarjeta-opcion-admin {
+    width: 100px;
+    padding: 46px;
+    background-color: white;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 0px 38px 96px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+    margin: 0px 38px 77px 38px;;
+}
+
+
+.tarjeta-opcion-admin a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tarjeta-opcion-admin:hover {
+    transform: translateY(-46px);
+    box-shadow: 0px 77px 154px rgba(0, 0, 0, 0.3);
+}
+
+/* imágenes dentro de los iconos  */
+.imagen-opcion {
+    width: 77px; 
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.descripcion-opcion {
+    font-size: 20px; 
+    color: #666;
+    margin: 0px;
+}
+
+
+@media screen and (max-width: 768px) {
+    body { width: 100%; margin: 0; }
+
+    /* Header */
+    .barra-superior-admin {
+        width: 100%;
+        display: block; /* hacemos que los elementos del nav se apilen */
+        padding: 10px;
+        text-align: center;
+    }
+
+    .barra-superior-admin ul {
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .barra-superior-admin li {
+
+        display: inline-block;
+        margin: 5px 30px;
+    }
+
+    .enlace-volver-atras { font-size: 18px; display: block; margin-bottom: 5px; }
+    .perfil-admin { font-size: 14px; padding: 3px 8px; display: inline-block; margin-top: 5px; }
+
+    /* Dashboard */
+    .contenido-dashboard { padding-top: 30px; }
+    .texto-principal { font-size: 20px; margin-bottom: 30px; }
+    .titulo-dashboard { font-size: 14px; }
+    .contenedor-opciones-admin { width: 100%; margin: 15px 0; text-align: center; }
+    .tarjeta-opcion-admin { width: 70%; padding: 15px; margin: 10px auto; }
+    .imagen-opcion { width: 50px; margin-bottom: 8px; }
+    .descripcion-opcion { font-size: 14px; }
+}

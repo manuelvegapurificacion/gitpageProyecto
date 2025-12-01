@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Usuarios</title>
+    <link rel="stylesheet" href="estiloAdmin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="barra-superior-admin">
+        <ul>
+            <li><a class="enlace-volver-atras" href="admin_dashboard.html"> ⬅ </a></li>
+            <li class="titulo-dashboard"><a href="admin_dashboard.html">Dashboard</a></li>
+            <li class="perfil-admin">ADMIN</li>
+        </ul>
+    </nav>
+
+<h1 class="titulo"> Listar Usuarios</h1>
+
+<main class="contenedor-tabla">
+
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Eliminar</th>
+                <th>Modificar</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Ejemplos de filas -->
+            <tr>
+                <td>kiko</td>
+                <td>kiko@email.com</td>
+                <td><button class="btn-eliminar">Eliminar</button></td>
+                <td><a href="admin_modificarUsuario.html"><button class="btn-modificar">Modificar</button></a></td>
+            </tr>
+
+            <tr>
+                <td>Paco </td>
+                <td>paco.moon@gmail.com</td>
+                <td><button class="btn-eliminar">Eliminar</button></td>
+                <td><a href="admin_modificarUsuario.html"><button class="btn-modificar">Modificar</button></a></td>
+            </tr>
+
+            <tr>
+                <td>Carlos</td>
+                <td>carlos@fox.net</td>
+                <td><button class="btn-eliminar">Eliminar</button></td>
+                <td><a href="admin_modificarUsuario.html"><button class="btn-modificar">Modificar</button></a></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <div class="contenedor-crear">
+        <button class="btn-crear">CREAR USUARIO</button>
+    </div>
+
+</main>
+
+</body>
+</html>
