@@ -1008,3 +1008,41 @@ footer {
         margin: 40% auto;
     }
 }
+
+@media screen and (max-width: 768px) {
+    body { width: 100%; margin: 0; }
+
+    /* Header /
+    .barra-superior-admin {
+        width: 100%;
+        display: block; / hacemos que los elementos del nav se apilen /
+        padding: 10px;
+        text-align: center;
+    }
+
+    .barra-superior-admin ul {
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .barra-superior-admin li {
+
+        display: inline-block;
+        margin: 5px 30px;
+    }
+
+    .enlace-volver-atras { font-size: 18px; display: block; margin-bottom: 5px; }
+    .perfil-admin { font-size: 14px; padding: 3px 8px; display: inline-block; margin-top: 5px; }
+
+    / Dashboard */
+    .contenido-dashboard { padding-top: 30px; }
+    .texto-principal { font-size: 20px; margin-bottom: 30px; }
+    .titulo-dashboard { font-size: 14px; }
+    .contenedor-opciones-admin { width: 100%; margin: 15px 0; text-align: center; }
+    .tarjeta-opcion-admin { width: 70%; padding: 15px; margin: 10px auto; }
+    .imagen-opcion { width: 50px; margin-bottom: 8px; }
+    .descripcion-opcion { font-size: 14px; }
+}
