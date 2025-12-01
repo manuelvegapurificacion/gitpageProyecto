@@ -984,3 +984,27 @@ footer {
         margin: 50%  auto;
     }
 }
+
+/*Media Query Rastrollo*/
+@media (max-width: 1200px) {
+
+
+    .formulario-base {
+        margin: 50%  auto;
+    }
+
+    .contenedor-principal-acceso {
+         height: 100%;
+    }
+    .logo {
+        width: 40%;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+    }
+    .caja-login{
+        width: 80%;
+        margin: 40% auto;
+    }
+}
