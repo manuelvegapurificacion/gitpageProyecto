@@ -101,7 +101,9 @@ export const eventos = [
 /*Coger cartas de una misma zona para el jugador y eventos y mostrarlos en el html*/
 /*la zona sera una variable desde php dependiendo de la eleccion del jugador al inicio del juego y se le enviara a la funcion*/
 
-let zonaSeleccionada = 'Mar'; // Ejemplo de zona seleccionada
+//Por ahora saco el título para seleccionar la zona
+const title = document.title;
+let zonaSeleccionada = title;
 
 /* Un Array con todas las cartas seleccionadas actualmente para poder sacar su información en el panel central*/
 
