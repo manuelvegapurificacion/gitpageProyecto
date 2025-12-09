@@ -510,6 +510,7 @@ body {
     font-size: 2vh;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
     margin: auto;
     cursor: pointer;
@@ -543,6 +544,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 .tarjeta img {
