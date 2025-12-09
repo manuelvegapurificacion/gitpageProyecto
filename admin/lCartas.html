@@ -22,6 +22,11 @@
 
     <main class="contenedor-tabla">
 
+        <div id="busquedaCrear">
+            <input type="text" id="busqueda" placeholder="🔍 Buscar"/>
+            <a href="admin_CrearUsuario.html"><button class="btn-crear">Crear</button></a>
+        </div>
+
         <table class="tabla">
             <thead>
                 <tr>
@@ -66,11 +71,17 @@
             </tbody>
         </table>
 
-        <div class="contenedor-crear">
-            <a href="crearCartas.html"><button class="btn-crear">CREAR CARTA</button></a>
-        </div>
-
     </main>
+
+    <div id="modal-confirm">
+        <div class="modal-content">
+            <p id="modal-text"></p>
+            <button id="btn-si">Sí</button>
+            <button id="btn-no">No</button>
+        </div>
+    </div>
+
+    <script src="listas.js"></script>
 
 </body>
 </html>

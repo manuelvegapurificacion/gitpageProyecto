@@ -67,6 +67,12 @@ a{
     display: inline-block;
 }
 
+/*Quitar estilo de enlace*/
+.perfil-admin a{
+    text-decoration: none;
+    color: white;
+}
+
 
 /**************************** MAIN **********************************************/
 .mainEstrecho{
@@ -151,31 +157,82 @@ a{
         background-color: #2563eb;
     }
 
+    /* BÚSQUEDA Y CREAR */
+    #busquedaCrear{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* BÚSQUEDA */
+
+    #busqueda{
+        display: inline-block;
+        margin: 10px;
+        width: 90%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 3px solid;
+        border-color: #E5E7EB;
+        background-color: #F9FAFB;
+    }
+
     /* BOTÓN CREAR */
-    .contenedor-crear {
-        background-color: #ff8f00;
-        width: 100%;
-        padding: 15px 0;
-        margin-top: 20px;
-        border-radius: 12px;
-    }
 
-    .btn-crear {
-        background-color: #ececec;
-        padding: 10px 25px;
-        border-radius: 8px;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-        
-    }
+        .btn-crear {
+            background-color: #ff8f00;
+            padding: 10px 25px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            
+        }
 
-    .btn-crear:hover {
-        background-color: #d6d6d6;
-    }
-
+        .btn-crear:hover {
+            background-color: #ffb758;
+        }
 
 }
+
+/* POP-UP ELIMINAR */
+        #modal-confirm {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #modal-confirm{
+            .modal-content {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                min-width: 250px;
+                text-align: center;
+                box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            }
+
+            button {
+                margin: 10px;
+                padding: 8px 15px;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                color: white;
+                font-weight: bold;
+            }
+        }
+
+        #btn-si {
+            background: #28a745;
+        }
+
+        #btn-no {
+            background: #dc3545;
+        }
 
 /* FORMULARIO */
 
@@ -208,7 +265,7 @@ a{
     }
 
     select{
-        width: 104%;
+        width: 100%;
         padding: 10px;
         border-radius: 10px;
         border: 3px solid;
@@ -220,7 +277,8 @@ a{
         display: flex;
         flex: 1;
         justify-content: space-evenly;
-        width: 107%;
+        width: 100%;
+        gap: 10px;
     }
 
     #modificar{
@@ -321,7 +379,7 @@ a{
     font-weight: bold;
 }
 
-/* Recargar dashboard */
+
 .titulo-dashboard {
     color: white;
     font-size: 18px; 
@@ -335,13 +393,14 @@ a{
     text-decoration: none;
 }
 
-/* Contenedor de las 4 opciones */
+/* Contenedor de las opciones */
 .contenedor-opciones-admin {
     width: 100%;
     text-align: center;
     margin-top: 2%;
     margin-bottom: 4%;
 }
+
 /*quitar estilo de enlace*/
 .contenedor-opciones-admin a {
     text-decoration: none;
@@ -367,7 +426,7 @@ a{
     box-shadow: 0 4% 8% rgba(0, 0, 0, 0.3);
 }
 
-/* imágenes dentro de los iconos  */
+/* imágenes dentro de los iconos  redondeadas con border*/
 .imagen-opcion {
     width: 50%; 
     border-radius: 50%;
@@ -377,4 +436,122 @@ a{
     font-size: 20px; 
     color: #666;
     margin: 0;
+}
+
+/*Media query Rastrollo*/
+@media screen and (max-width: 768px) {
+    body { width: 100%; margin: 0; }
+
+    /* Header */
+    .barra-superior-admin {
+        width: 100%;
+        display: block; /* hacemos que los elementos del nav se apilen */
+        padding: 10px;
+        text-align: center;
+    }
+
+    .barra-superior-admin ul {
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .barra-superior-admin li {
+
+        display: inline-block;
+        margin: 5px 30px;
+    
+    }
+
+    
+
+    .enlace-volver-atras { font-size: 18px; display: block; margin-bottom: 5px; }
+    .perfil-admin { font-size: 14px; padding: 3px 8px; display: inline-block; margin-top: 5px; }
+
+
+    /* Dashboard */
+    .contenido-dashboard { padding-top: 30px; }
+    .texto-principal { font-size: 20px; margin-bottom: 30px; }
+    .titulo-dashboard { font-size: 14px; }
+    .contenedor-opciones-admin { width: 100%; margin: 15px 0; text-align: center; }
+    .tarjeta-opcion-admin { width: 70%; padding: 15px; margin: 10px auto; }
+    .imagen-opcion { width: 50px; margin-bottom: 8px; }
+    .descripcion-opcion { font-size: 14px; }
+}
+
+/* CREAR CARTAS CON EVENTO */
+.evento-selector{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.evento-selector select{
+    flex: 1;
+}
+
+.btn-crear-evento{
+    height: 44px;
+    flex-shrink: 0;/* Impedir que encoja */
+    padding: 0 15px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* BOTONES */
+.btn-formulario{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-formulario button{
+    border: none; 
+    border-radius: 12px; 
+    cursor: pointer;
+    flex: none; 
+    padding: 10px 25px; 
+    font-weight: bold; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+    transition: all 0.3s ease; 
+    color: white;
+}
+
+.btn-formulario button[type="submit"]{
+    background-color: #4CAF50;
+}
+
+.btn-formulario button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+#cancelar{
+    background-color: red;
+}
+
+/* FORMULARIO EVENTO NUEVO */
+#formularioEventoNuevo{
+    display: none;
+    background-color: #34495e;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+
+     input, select{
+        box-sizing: border-box;
+    }
+     h2{
+        text-align: center;
+        margin-top: 0; 
+    }
+
 }

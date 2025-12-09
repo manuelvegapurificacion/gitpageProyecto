@@ -54,7 +54,7 @@ body {
 
 /* CAJA LOGIN */
 .caja-login {
-  width: 28%; /* 28% del contenedor */
+  width: 28%; 
   min-width: 250px;
   margin: 2% auto 0 auto; 
   padding: 1.5%; 
@@ -151,25 +151,25 @@ body {
 
 /* Hover general */
 .boton:hover {
-  background-color: #1c86ee; /* azul un poco más oscuro */
+  background-color: #1c86ee; 
   transform: scale(1.05); /* zoom */
-  box-shadow: 0 3px 10px rgba(0,0,0,0.3); /* sombra */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3); 
 }
 
 .boton-invitado:hover {
-  background-color: #bfbfbf; /* gris más oscuro */
+  background-color: #bfbfbf; 
   transform: scale(1.05);
   box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 .boton-login-google:hover {
-  background-color: #f0f0f0; /* blanco más brillante */
+  background-color: #f0f0f0; 
   transform: scale(1.05);
   box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 .boton-admin:hover {
-  background-color: #ff9900; /* naranja más fuerte */
+  background-color: #ff9900;
   transform: scale(1.05);
   box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
@@ -205,7 +205,7 @@ body {
     
     background-color: #90ee90;
     padding-top: 5%; 
-    padding-bottom: 5%; /* para que haya espacio debajo del formulario */
+    padding-bottom: 5%; 
     margin: 0 auto;
     position: relative; 
     box-sizing: border-box;
@@ -619,16 +619,18 @@ footer {
 
 
 .contenedor {
-    width: 1800px; 
+    width: 100%; 
     height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end; 
-    background: #d9f0e1;
     display: flex;
     overflow: hidden;
     padding: 20px;
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
 }
 
 /* Barra de vida */
@@ -678,6 +680,8 @@ footer {
     border: 3px solid #a5c494;
     padding: 10px;
     text-align: center;
+    position: relative;
+    cursor: pointer;
 }
 
 .alerta {
@@ -692,6 +696,11 @@ footer {
 
 /* Información carta */
 .info-carta {
+    display: flex;
+    flex-wrap: wrap;         
+    justify-content: center;  
+    align-content: center;   
+    gap: 30px;
     background: #fff;
     padding: 20px;
     text-align: center;
@@ -701,6 +710,15 @@ footer {
     border-radius: 12px;
     font-size: 18px;
     box-shadow: 0 0 10px #0002;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.info-carta div{
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.445);
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
 }
 
 /* Estado de ronda */
@@ -730,6 +748,9 @@ footer {
     background: #a9d398;
     border-radius: 10px;
     border: 3px solid #88b47c;
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
 }
 
 /* Botones */
@@ -772,6 +793,126 @@ footer {
     text-decoration: none;
     color: white;
 }
+
+/* Fondos para cada tablero */
+#bodyBosque{
+    .contenedor{
+        background-image: url("../img/fondoBosque.png");
+    }
+
+    .carta-mano{
+        background-image: url("../img/cartaBosque.png");
+    }
+
+    .problema{
+        background-image: url("../img/eventoBosque.png");
+    }
+}
+
+#bodyCiudad{
+    .contenedor{
+        background-image: url("../img/fondoCiudad.png");
+    }
+
+    .carta-mano{
+        background-image: url("../img/cartaCiudad.png");
+    }
+
+    .problema{
+        background-image: url("../img/eventoCiudad.png");
+    }
+}
+
+#bodyDesierto{
+    .contenedor{
+        background-image: url("../img/fondoDesierto.png");
+    }
+
+    .carta-mano{
+        background-image: url("../img/cartaDesierto.png");
+    }
+
+    .problema{
+        background-image: url("../img/eventoDesierto.png");
+    }
+}
+
+#bodyMar{
+    .contenedor{
+        background-image: url("../img/fondoMar.png");
+    }
+
+    .carta-mano{
+        background-image: url("../img/cartaMar.png");
+    }
+
+    .problema{
+        background-image: url("../img/eventoMar.png");
+    }
+}
+
+/* Estilo de carta general */
+
+.carta p{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.titulo-carta{
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+.icono-carta{
+    font-size: 5em;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Dimensionado de evento */
+.problema{
+    width: 176px;
+    height: 256px;
+    border: 0;
+    background: none;
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+}
+
+.problema{
+
+    p{
+        margin-top: 10px;
+        margin-left: 7px;
+        margin-right: 7px;
+        margin-bottom: 10px;
+    }
+
+    .icono-carta{
+        font-size: 6em;
+        margin: 0;
+    }
+}
+
+
+.carta {
+    transition: transform 0.3s ease; /* Transición tanto al subir como al bajar */
+}
+
+/*Carta levantada al hacer click*/
+.carta-levantada {
+    transform: translateY(-20px); /* Se levanta 20px */
+    transition: transform 0.3s ease; /* Suavizado del movimiento */
+    z-index: 10; /* Para que se vea sobre las demás cartas */
+}
+
 /*Vega*/
 /*--------------------------------Pantalla de Perfil del usuario-------------------------------*/
 
@@ -976,14 +1117,6 @@ footer {
 /* FORMULARIO - reutilizado de pantalla Perfil */
 /* BOTONES - reutilizado de pantalla Perfil */
 
-@media (max-width: 1200px) {
-
-    
-    /*formulario de login y registro mas estrecho y margin arriba y abajo*/
-    .formulario-base {
-        margin: 50%  auto;
-    }
-}
 
 /*Media Query Rastrollo*/
 @media (max-width: 1200px) {
@@ -1009,40 +1142,54 @@ footer {
     }
 }
 
-@media screen and (max-width: 768px) {
-    body { width: 100%; margin: 0; }
+/* --- Estilos para el Popup Cómo Jugar y gestion de la sesion  esto es de pantalla de zonas--- */
 
-    /* Header /
-    .barra-superior-admin {
-        width: 100%;
-        display: block; / hacemos que los elementos del nav se apilen /
-        padding: 10px;
-        text-align: center;
-    }
+/* Contenedor del popup: ocupa toda la pantalla y oscurece el fondo */
+#popup-reglas {
+    display: none; /* Oculto por defecto, se muestra con JS */
+    position: fixed; 
+    z-index: 1000; /* Se asegura de que esté por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center; 
+}
 
-    .barra-superior-admin ul {
-        width: 100%;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
+/* El contenido del popup: la caja blanca con el texto */
+#popup-contenido {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px 30px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 15px;
+    position: relative; /*pal boton de cerrar*/
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s;
+}
 
-    .barra-superior-admin li {
+/* Animación q me ha dao gpt*/
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+}
 
-        display: inline-block;
-        margin: 5px 30px;
-    }
+/* Botón cerrar */
+.cerrar-popup {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
 
-    .enlace-volver-atras { font-size: 18px; display: block; margin-bottom: 5px; }
-    .perfil-admin { font-size: 14px; padding: 3px 8px; display: inline-block; margin-top: 5px; }
-
-    / Dashboard */
-    .contenido-dashboard { padding-top: 30px; }
-    .texto-principal { font-size: 20px; margin-bottom: 30px; }
-    .titulo-dashboard { font-size: 14px; }
-    .contenedor-opciones-admin { width: 100%; margin: 15px 0; text-align: center; }
-    .tarjeta-opcion-admin { width: 70%; padding: 15px; margin: 10px auto; }
-    .imagen-opcion { width: 50px; margin-bottom: 8px; }
-    .descripcion-opcion { font-size: 14px; }
+.cerrar-popup:hover,
+.cerrar-popup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

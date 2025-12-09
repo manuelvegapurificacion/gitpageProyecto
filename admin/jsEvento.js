@@ -1,3 +1,9 @@
+///////////////////////////////////////////////////////////////////
+/////////////////   CREACION DE EVENTO
+///////////////////////////////////////////////////////////////////
+/**
+ * 
+ */
 // Referenciar a los elementos
 const btnCrearEvento = document.getElementById('btnCrearEvento');
 const formularioEventoNuevo = document.getElementById('formularioEventoNuevo');
@@ -8,7 +14,7 @@ let creandoEventoNuevo = false;
 
 // FUNCIONES 
 // Alternar entre crear evento nuevo o seleccionar existente
-btnCrearEvento.addEventListener('click', function(e) {
+btnCrearEvento.addEventListener('click', function() {
     
     //Cambiar valor al pulsar el boton
     creandoEventoNuevo = !creandoEventoNuevo;
@@ -39,4 +45,17 @@ btnCrearEvento.addEventListener('click', function(e) {
         document.getElementById('rondasEvento').value = '';
         document.getElementById('emoticonoEvento').value = '';
     }
+});
+
+///////////////////////////////////////////////////////////////////
+/////////////////   CONTROL DE ZONA 
+///////////////////////////////////////////////////////////////////
+let opcionZona = document.getElementById("zonaSelect");
+let eventos = document.getElementById("eventoSelect");
+//Se activa al cambiar la opcion en el select
+opcionZona.addEventListener('change', function(){
+
+    let zona = this.value; //Obiene el valor del elemento
+    
+    fetch()
 });

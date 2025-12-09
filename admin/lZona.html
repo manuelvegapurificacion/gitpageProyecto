@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Usuarios</title>
+    <title>Listar Zonas</title>
     <link rel="stylesheet" href="estiloAdmin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
         </ul>
     </nav>
 
-<h1 class="titulo"> Listar Eventos</h1>
+<h1 class="titulo"> Listar Zonas</h1>
 
 <main class="contenedor-tabla">
 
@@ -26,8 +26,8 @@
         <thead>
             <tr>
                 <th>Nombre</th>
-                <th>Daño</th>
-                <th>Duracion</th>
+                <th>Nº Cartas</th>
+                <th>Nº Eventos</th>
                 <th>Eliminar</th>
                 <th>Modificar</th>
             </tr>
@@ -36,37 +36,52 @@
         <tbody>
             <!-- Ejemplos de filas -->
             <tr>
-                <td>Contaminacion</td>
-                <td>2</td>
-                <td>Reciclaje</td>
+                <td>Bosque</td>
+                <td>3 </td>
+                <td>4</td>
                 <td><button class="btn-eliminar">Eliminar</button></td>
-                <td><a href="modificarEvento.html"><button class="btn-modificar">Modificar</button></a></td>
+                <td><a href="modificarZona.html"><button class="btn-modificar">Modificar</button></a></td>
+
             </tr>
 
             <tr>
-                <td>Tsunami</td>
-                <td>8</td>
-                <td>Control mareas</td>
-                <td><button class="btn-eliminar">Eliminar</button></td>
-                <td><a href="modificarEvento.html"><button class="btn-modificar">Modificar</button></a></td>
-            </tr>
-
-            <tr>
-                <td>Deforestación</td>
+                <td>Oceano</td>
                 <td>3</td>
-                <td>Replantacion</td>
+                <td>4</td>
                 <td><button class="btn-eliminar">Eliminar</button></td>
-                <td><a href="modificarEvento.html"><button class="btn-modificar">Modificar</button></a></td>
+                <td><a href="modificarZona.html"><button class="btn-modificar">Modificar</button></a></td>
+            </tr>
+
+            <tr>
+                <td>Desierto</td>
+                <td>3</td>
+                <td>4</td>
+                <td><button class="btn-eliminar">Eliminar</button></td>
+                <td><a href="modificarZona.html"><button class="btn-modificar">Modificar</button></a></td>
+            </tr>
+
+            <tr>
+                <td>Ciudad</td>
+                <td>3</td>
+                <td>4</td>
+                <td><button class="btn-eliminar">Eliminar</button></td>
+                <td><a href="modificarZona.html"><button class="btn-modificar">Modificar</button></a></td>
             </tr>
 
         </tbody>
     </table>
 
-    <div class="contenedor-crear">
-        <a href="crearEvento.html"><button class="btn-crear">CREAR EVENTO</button></a>
+</main>
+
+    <div id="modal-confirm">
+        <div class="modal-content">
+            <p id="modal-text"></p>
+            <button id="btn-si">Sí</button>
+            <button id="btn-no">No</button>
+        </div>
     </div>
 
-</main>
+<script src="listas.js"></script>
 
 </body>
 </html>
